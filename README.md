@@ -24,13 +24,11 @@ Experiments across multiple math benchmarks show that PATS consistently achieves
 - 🧩 **Robust Generalization**: Compatible with diverse policy models and PRMs across tasks.
 
 
----
-
 ## 🏆 Experiment Results
 
 ### 🚀 **Performance Across Datasets**
 
-We evaluate our method across multiple math reasoning datasets including **GSM8K, MATH500, AMC23, MinervaMath, and AIME24**.
+We evaluate our method across multiple math reasoning datasets including **GSM8K, MATH500, AMC23, MinervaMath, and AIME24**. The policy model is Qwen2.5-7B-Instruct, and the process reward model is Qwen2.5-Math-PRM-7B.
 
 <p align="center">
   <img src="./fig/main_performance.png" alt="Figure 2: Main Performance" width="100%" />
@@ -66,13 +64,31 @@ Compares three strategies: No Penalty, Infinite Penalty, and PATS (our one-time 
 
 |**Setting** | **Avg. Accuracy ↑**| **Avg. Token Usage ↓** |
 |--------|-----------------|--------------------|
-| PATS-No-Penalty | 55.9% | 2362.9 |
-| PATS-Infinite-Penalty | 60.0% | 4183.8 |
-| ⭐ **PATS (Ours)**   | **61.3%** | **2808.0** |
+| PATS-No-Penalty | 55.9 | 2362.9 |
+| PATS-Infinite-Penalty | 60.0| 4183.8 |
+| ⭐ **PATS (Ours)**   | **61.3** | **2808.0** |
 
 > **Conclusion:** PATS best balances accuracy improvement and token cost, indicating that penalties are necessary but should be moderate.
 
----
+### 🔍 **Generalization Experiments**
+
+We evaluate the generalization of PATS’s two core components: the policy model and the process reward model.
+
+**Generalization of PATS across different policy models**, while keeping the Process Reward Model fixed as Qwen2.5-Math-PRM-7B.
+<p align="center">
+  <img src="./fig/Policy Model Generalization.png" alt="Figure 4: Generalization of PATS across different policy models" width="100%" />
+</p>
+
+**Generalization of PATS across different Process Reward Models**, while keeping the policy model fixed as Qwen2.5-7B-Instruct.
+<p align="center">
+  <img src="./fig/PRM Generalization.png" alt="Figure 5: Generalization of PATS across different Process Reward Models" width="100%" />
+</p>
+
+
+
+> **Conclusion:** PATS shows robust generalization across diverse policy models and PRMs.
+
+
 ## 🛠️ Usage
 
 **For specific usage, please refer to `./code/examples/example.sh`.**
@@ -81,9 +97,7 @@ We set the temperature to **0.6** to balance candidate step diversity and genera
 
 
 
----
-
-## Citation
+## 📝 Citation
 
 If you find this repository helpful, feel free to cite our paper:
 
