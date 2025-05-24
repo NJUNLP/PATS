@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/your-paper-id "> 📃 Paper</a> | 
-  <a href="https://github.com/NJUNLP/PATS "> ⚙️ Code</a> | 
+  <a href="https://github.com/NJUNLP/PATS "> ⚙️ Code</a> 
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Performance of initial thinking modes across tasks of varying difficulty, with d
 We compare reasoning processes using MATH500 (easy) and AMC23 (hard) as representative tasks.
 
 <p align="center">
-  <img src="./fig/correct_comparison.png" alt="Figure 3: Thinking mode distribution comparison" width="80%" />
+  <img src="./fig/correct_comparison.png" alt="Figure 3: Thinking mode distribution comparison" width="100%" />
 </p>
 
 > **Conclusion:** Harder reasoning tasks requires more computation for correct answers.
