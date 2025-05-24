@@ -83,15 +83,6 @@ We set the temperature to **0.6** to balance candidate step diversity and genera
 
 ---
 
-## 📌 Key Contributions
-
-- Introduced a **dynamic thinking mode switching paradigm** that adapts reasoning complexity at the process level.
-- Demonstrated superior performance with **lower computational cost** compared to static multi-candidate methods.
-- Validated generalization across **multiple policy models and PRMs**.
-- Released code, datasets, and trained models for reproducibility and further research.
-
----
-
 ## Citation
 
 If you find this repository helpful, feel free to cite our paper:
