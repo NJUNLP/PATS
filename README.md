@@ -6,10 +6,8 @@
 </p>
 
 <p align="center">
-  <img src="./fig/pats_pipeline.png" alt="Figure 1: PATS Framework Illustration" width="80%" />
+  <img src="./fig/pats_pipeline.png" alt="Figure 1: PATS Framework Illustration" width="100%" />
 </p>
-
----
 
 ## Overview
 
@@ -34,17 +32,8 @@ Experiments across multiple math benchmarks show that PATS consistently achieves
 
 We evaluate our method across multiple math reasoning datasets including **GSM8K, MATH500, AMC23, MinervaMath, and AIME24**.
 
-|**Setting** | **Avg. Accuracy ↑**| **Avg. Token Usage ↓** |
-|--------|-----------------|--------------------|
-| All-simple | 55.5% | 1354.3 |
-| All-medium | 58.4% | 2617.5 |
-| All-complex | 61.6% | 5070.6 |
-| Solution-verification Switch | 56.9% | 3022.7 |
-| Random-mode Switch | 56.4% | 3647.6 |
-| ⭐ **PATS (Ours)**   | **61.3%** | **2808.0** |
-
 <p align="center">
-  <img src="./fig/main_performance.png" alt="Figure 2: Main Performance" width="80%" />
+  <img src="./fig/main_performance.png" alt="Figure 2: Main Performance" width="100%" />
 </p>
 
 > **Conclusion:** PATS achieves effective and efficient reasoning with an excellent accuracy-efficiency balance.
@@ -84,34 +73,11 @@ Compares three strategies: No Penalty, Infinite Penalty, and PATS (our one-time 
 > **Conclusion:** PATS best balances accuracy improvement and token cost, indicating that penalties are necessary but should be moderate.
 
 ---
-
-## 🔁 Methodology
-
-### 🔄 Dynamic Thinking Mode Switching
-
-At each reasoning step, our model evaluates the current state using PRM scores and selects an appropriate number of candidate steps (2/4/8), simulating simple, medium, or complex thinking modes. This allows for:
-
-- 🎯 Efficient exploration of difficult reasoning steps.
-- 📉 Reduced computation in simpler steps.
-- 🧩 Adaptive recovery from early errors.
-
-### 🧠 PRM-Guided Beam Search
-
-We use a PRM-guided best-first search strategy:
-
-1. At each step, generate `w` candidate reasoning steps.
-2. Score them using the PRM.
-3. Select the top-1 candidates for the next iteration.
-4. Dynamically adjust `w` based on difficulty estimates.
-
-This mimics human-like cognitive control, where more effort is allocated to challenging subproblems.
-
----
 ## 🛠️ Usage
 
 **For specific usage, please refer to `./code/examples/example.sh`.**
 
-We set the temperature to **0.6** to balance candidate step diversity and generation quality. We set reward thresholds as follows: $value_{good} = 0.85$, $value_{low} = 0.75$, and $value_{bad} = 0.4$. The threshold setting is determined by the distribution of scoring preferences in the PRM and empirical configuration.
+We set the temperature to **0.6** to balance candidate step diversity and generation quality. We set reward thresholds as follows: **$value_{good} = 0.85$**, **$value_{low} = 0.75$**, and **$value_{bad} = 0.4$**. The threshold setting is determined by the distribution of scoring preferences in the PRM and empirical configuration.
 
 
 
