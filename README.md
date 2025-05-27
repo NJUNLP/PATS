@@ -99,12 +99,12 @@ We set the temperature to **0.6** to balance candidate step diversity and genera
 If you find this repository helpful, feel free to cite our paper:
 
 ```bibtex
-@misc{2025pats,
-  title={PATS: Process-Level Adaptive Thinking Mode Switching},
-  author={Yi Wang and Junxiao Liu and Shimao Zhang and Jiajun Chen and Shujian Huang},
-  year={2025},
-  eprint={your-arxiv-id},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/your-arxiv-id}
+@misc{wang2025patsprocessleveladaptivethinking,
+      title={PATS: Process-Level Adaptive Thinking Mode Switching}, 
+      author={Yi Wang and Junxiao Liu and Shimao Zhang and Jiajun Chen and Shujian Huang},
+      year={2025},
+      eprint={2505.19250},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.19250}, 
 }
