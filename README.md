@@ -1,7 +1,7 @@
 # PATS: Process-Level Adaptive Thinking Mode Switching
 
 <p align="center">
-  <a href="https://arxiv.org/abs/your-paper-id"> 📃 Paper</a> | 
+  <a href="https://arxiv.org/abs/2505.19250"> 📃 Paper</a> | 
   <a href="https://github.com/NJUNLP/PATS"> ⚙️ Code</a> 
 </p>
 
